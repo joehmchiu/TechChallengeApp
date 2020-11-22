@@ -42,7 +42,6 @@ pipeline {
         sh "sudo rm -rf ${wdir}"
         sh "sudo git clone ${app} ${wdir}"
         sh "ls -ltrhR"
-        sh "sudo perl -pi.bak -e '(\$v)=\$_=~/Version: \"0.7.(\\d)\"/g;\$v++;s/Version: \"0.7.(\\d)\"/Version: \"0.7.\$v\"/' ./cmd/root.go"
 	sh "sudo /opt/bin/git-push.sh ${wdir}"
         sh "Done!"
       }
