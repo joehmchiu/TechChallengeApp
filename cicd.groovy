@@ -44,6 +44,7 @@ pipeline {
         sh "ls -ltrhR"
 	sh "sudo /opt/bin/git-push.sh ${wdir}"
         echo "Done!"
+        sh "sudo rm -rf ${wdir}"
       }
     }
   }
