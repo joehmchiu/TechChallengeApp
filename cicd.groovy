@@ -43,7 +43,7 @@ pipeline {
         sh "sudo git clone ${app} ${wdir}"
         sh "ls -ltrhR"
 	sh "sudo /opt/bin/git-push.sh ${wdir}"
-        sh "Done!"
+        echo "Done!"
       }
     }
   }
