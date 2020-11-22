@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('Start Task') {
       steps {
-        echo 'Hi, starting to build the App.'
+        echo 'Hi, starting to build and test the App.'
       }
     }
     stage('Update Change') {
