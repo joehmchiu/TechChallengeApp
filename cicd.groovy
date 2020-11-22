@@ -26,14 +26,12 @@ pipeline {
     }
     stage('Preload for Deployment') {
       steps {
-        echo "${wdir}/auto-cicd-test/servian-installer"
         load "${wdir}/auto-cicd-test/servian-installer"
       }
     }
     stage('Preload for Testing') {
       steps {
         sh "ls -ltrh ${workspace}/"
-        echo "${wdir}/auto-cicd-test/crud-tester"
         load "${wdir}/auto-cicd-test/crud-tester"
       }
     }
